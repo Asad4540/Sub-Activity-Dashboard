@@ -1,0 +1,65 @@
+:root{
+    --light-color: #fff;
+    --primary-color: #06152B;
+    --bg-color: #3A36DB;
+    --input-bg-color: #F1F4F9;
+}
+
+.btn-primary {
+    background-color: var(--bg-color) !important;
+}
+
+body{
+    background-image: url('../images/login/bg_back.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-card-header{
+    color: var(--primary-color);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 42px; /* 123.529% */
+    letter-spacing: -0.68px;
+}
+
+.btn-login{
+    display: flex;
+    padding: 12px 31px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.btn-login span{
+    color: var(--light-color);
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+label.col-form-label{
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-control{
+    display: flex;
+    height: 64px;
+    padding: 20.624px 52.071px 22.376px 30.872px;
+    align-items: center;
+    border-radius: 14px;
+    border: 2px solid #D9E1E7;
+    background: var(--input-bg-color) !important;
+}
