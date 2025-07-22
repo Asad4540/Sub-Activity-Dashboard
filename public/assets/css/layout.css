@@ -49,7 +49,7 @@ nav.navbar {
     margin-bottom: 15px;
     display: flex;
     gap: 13px;
-    padding: 10px;
+    padding: 10px 10px 10px 30px;
 }
 
 .sidebar-lists li,
@@ -61,6 +61,7 @@ nav.navbar {
     font-weight: 600;
     line-height: 28px;
     letter-spacing: -0.32px;
+
 }
 
 .sidebar-lists li a {
@@ -84,6 +85,20 @@ nav.navbar {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.sidebar-lists li.active {
+    background-color: var(--btn-primary-color);
+    border-radius: 15px;
+    padding-left: 30px;
+}
+
+.sidebar-lists li.active a {
+    color: #fff;
+}
+
+.sidebar-lists li.active i {
+    color: #fff;
 }
 
 .list-section-header {
