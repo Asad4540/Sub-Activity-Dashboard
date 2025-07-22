@@ -6,30 +6,62 @@
         <div class="row row-cols-1 row-cols-sm-2  row-cols-lg-4 g-4 mb-4">
 
             <!-- Card 1 -->
-           <div class="col">
-                <div class="card p-3 h-100">
-
+            <div class="col">
+                <div class="card  h-100">
+                    <div class="d-flex justify-content-between p-3">
+                        <div> <span class="card-head">Total Subscribers </span><br>
+                            <span class="card-nums"> 1,243</span>
+                        </div>
+                        <div>
+                            <img src="{{ asset('assets/images/blue-profile.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div><img src="{{ asset('assets/images/blue-wave.png') }}" class="w-100" alt=""></div>
                 </div>
             </div>
 
             <!-- Card 2 -->
             <div class="col">
-                <div class="card p-3 h-100">
-
+                <div class="card  h-100">
+                    <div class="d-flex justify-content-between p-3">
+                        <div> <span class="card-head">Active Subscriber</span><br>
+                            <span class="card-nums"> 984</span>
+                        </div>
+                        <div>
+                            <img src="{{ asset('assets/images/green-profile.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div><img src="{{ asset('assets/images/green-wave.png') }}" class="w-100" alt=""></div>
                 </div>
             </div>
 
             <!-- Card 3 -->
             <div class="col">
-                <div class="card p-3 h-100">
-
+                <div class="card  h-100">
+                    <div class="d-flex justify-content-between p-3">
+                        <div> <span class="card-head">New Registrations </span><br>
+                            <span class="card-nums"> 150</span>
+                        </div>
+                        <div>
+                            <img src="{{ asset('assets/images/violet-profile.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div><img src="{{ asset('assets/images/violet-wave.png') }}" class="w-100" alt=""></div>
                 </div>
             </div>
 
             <!-- Card 4 -->
             <div class="col">
-                <div class="card p-3 h-100">
-
+                <div class="card  h-100">
+                    <div class="d-flex justify-content-between p-3">
+                        <div> <span class="card-head">Downloads </span><br>
+                            <span class="card-nums"> 500</span>
+                        </div>
+                        <div>
+                            <img src="{{ asset('assets/images/orange-profile.png') }}" alt="">
+                        </div>
+                    </div>
+                    <div><img src="{{ asset('assets/images/orange-wave.png') }}" class="w-100" alt=""></div>
                 </div>
             </div>
 
