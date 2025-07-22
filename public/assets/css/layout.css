@@ -118,6 +118,7 @@ nav.navbar {
     display: flex;
     align-items: center;
     gap: 15px;
+    padding-right: 20px;
 }
 
 #navbarNotifications {
@@ -151,6 +152,7 @@ i.bi {
 nav .search-input {
     /* height: 58px; */
     padding: 0 28px;
+    border-radius: 12px 0px 0px 12px;
 }
 
 #navbarNotifications,
@@ -166,6 +168,7 @@ nav .search-input {
 
 .input-group-text {
     background-color: var(--bg-light-color);
+    border-radius: 12px;
 }
 
 .form-control:focus,
