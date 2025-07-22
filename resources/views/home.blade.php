@@ -68,26 +68,114 @@
         </div>
 
         <div class="row g-4 align-items-stretch">
-            <!-- RFP Table Section -->
+            <!-- Subscriber Growth -->
             <div class=" col-lg-7">
-                <div class="dashboard-card h-100 d-flex flex-column">
+                <div class="sub-growth-card h-100 d-flex flex-column">
                     <!-- Header -->
                     <div class="header-section mb-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4 class="mb-0 recentTitle">Subscriber Growth</h4>
+                            <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart Section -->
+            <!-- Performance Metrics -->
             <div class=" col-lg-5">
-                <div class="chart-container d-flex flex-column justify-content-between">
+                <div class="performance-card d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0 rfpSubmitText">Performance Metrics</h4>
+                        <h4 class="mb-0 db-cards-title">Performance Metrics</h4>
                         <div class="dropdown">
-                            <button class="btn btn-sm d-flex align-items-center gap-2" type="button">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
                                 View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch mt-2">
+            <!-- Activities -->
+            <div class=" col-lg-4">
+                <div class="middle-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Activities</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traffic Sources -->
+            <div class=" col-lg-4">
+                <div class="middle-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Traffic Sources</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Interests -->
+            <div class="col-lg-4">
+                <div class="middle-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Top Interests</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch mt-2">
+            <!-- Subscriber  -->
+            <div class=" col-lg-7">
+                <div class="sub-growth-card h-100 d-flex flex-column">
+                    <!-- Header -->
+                    <div class="header-section mb-3">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 db-cards-title">Subscribers</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class=" col-lg-5">
+                <div class="performance-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Recent Activity</h4>
+                        <div class="dropdown">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
+                                All Activity
                             </button>
                         </div>
                     </div>

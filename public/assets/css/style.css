@@ -53,11 +53,7 @@
     text-transform: uppercase;
 }
 
-
-
-
-.dashboard-card {
-    /* width: 896px; */
+.sub-growth-card {
     height: 527px;
     flex-shrink: 0;
     border-radius: 20px;
@@ -66,19 +62,41 @@
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
+.performance-card {
+    border: 1px solid #D9E1E7CC;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background: var(--Secondary-Primary-White, #FFF);
+    height: 527px;
+    flex-shrink: 0;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+}
+
+.middle-card {
+    border: 1px solid #D9E1E7CC;
+    border-radius: 20px;
+    padding: 1.5rem;
+    background: var(--Secondary-Primary-White, #FFF);
+    height: 462px;
+    flex-shrink: 0;
+    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
+}
+
 .header-section {
     padding: 1.5rem 1.5rem 0;
 }
 
-.chart-container {
-    stroke-width: 1px;
-    stroke: rgba(217, 225, 231, 0.80);
-    border: 1px solid #D9E1E7CC;
-    border-radius: 20px;
-    padding: 1.5rem;
-    /* width: 598px; */
-    height: 527px;
-    flex-shrink: 0;
+.db-cards-title {
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.a-link {
+    color: var(--btn-primary-color)
 }
 
 @media (max-width: 992px) {

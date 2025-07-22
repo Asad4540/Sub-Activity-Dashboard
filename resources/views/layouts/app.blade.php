@@ -36,28 +36,28 @@
         </div>
     </div>
     <div class="main-section row">
-        <div id="sidebar" class="col-xxl-2 col-md-3">
+        <div id="sidebar" class="col-xxl-2 col-md-3 sticky-top">
             <div class="sidebar-content">
                 <div class="sidebar-header">
                     <h1 class="sidebar-title">{{ config('app.name', 'Laravel') }}</h1>
                     <button type="button" class="btn-close text-reset d-md-none d-block" id="sidebarClose"></button>
                 </div>
-                <div class="navbar-lis-container">
+                <div class="navbar-lis-container ">
                     <ul class="list-unstyled sidebar-lists">
                         <li class="{{ request()->is('home') ? 'active' : '' }}">
                             <span><i class="bi bi-grid-1x2"></i></span>
                             <a href="{{ url('/home') }}">Dashboard</a>
                         </li>
-                        <li class="">
+                        <li class="{{ request()->is('subscribers') ? 'active' : '' }}">
                             <span><i class="bi bi-people"></i></span>
                             <a href="{{ url('/subscribers') }}">Subscribers</a>
                         </li>
-                        <li class="">
+                        <li class="{{ request()->is('analytics') ? 'active' : '' }}">
                             <span><i class="bi bi-bar-chart-line"></i></span>
                             <a href="{{ url('/analytics') }}">Analytics</a>
 
                         </li>
-                        <li class="">
+                        <li class="{{ request()->is('settings') ? 'active' : '' }}">
                             <span><i class="bi bi-gear"></i></span>
                             <a href="{{ url('/settings') }}">Settings</a>
                         </li>
@@ -102,9 +102,9 @@
             </div>
         </div>
         <div id="app" class="col-xxl-10 col-md-9 px-0">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <div class="container-fluid">
-                    <div class="navbar-header">
+            <nav class="navbar navbar-expand-md navbar-light sticky-top">
+                <div class="container-fluid ">
+                    <div class="navbar-header ">
                         <h2 class="navbar-brand m-0 p-0">Welcome Back, <b>Admin</b>!</h2>
 
                         <p class="m-0 nav-breadcrumb">Stay updated with your recent progress and stats.</p>
