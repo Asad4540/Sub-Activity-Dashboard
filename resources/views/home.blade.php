@@ -68,25 +68,25 @@
         </div>
 
         <div class="row g-4 align-items-stretch">
-            <!-- RFP Table Section -->
+            <!-- Subscriber Growth -->
             <div class=" col-lg-7">
-                <div class="dashboard-card h-100 d-flex flex-column">
+                <div class="sub-growth-card h-100 d-flex flex-column">
                     <!-- Header -->
                     <div class="header-section mb-3">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h4 class="mb-0 recentTitle">Subscriber Growth</h4>
+                            <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Chart Section -->
+            <!-- Performance Metrics -->
             <div class=" col-lg-5">
-                <div class="chart-container d-flex flex-column justify-content-between">
+                <div class="performance-card d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0 rfpSubmitText">Performance Metrics</h4>
+                        <h4 class="mb-0 db-cards-title">Performance Metrics</h4>
                         <div class="dropdown">
-                            <button class="btn btn-sm d-flex align-items-center gap-2" type="button">
+                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
                                 View Details
                             </button>
                         </div>

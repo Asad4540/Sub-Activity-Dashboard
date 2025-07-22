@@ -137,6 +137,10 @@ nav.navbar {
     padding-right: 20px;
 }
 
+.navbar-lis-container {
+    margin-bottom: 110%;
+}
+
 #navbarNotifications {
     padding: 0;
     display: flex;
