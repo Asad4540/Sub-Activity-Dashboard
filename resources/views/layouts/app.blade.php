@@ -101,7 +101,7 @@
                 </div>
             </div>
         </div>
-        <div id="app" class="col-xxl-10 col-md-9">
+        <div id="app" class="col-xxl-10 col-md-9 px-0">
             <nav class="navbar navbar-expand-md navbar-light">
                 <div class="container-fluid">
                     <div class="navbar-header">
