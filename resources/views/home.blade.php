@@ -10,7 +10,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Total Subscribers </span><br>
-                            <span class="card-nums"> 1,243</span> <span class="cards-percent text-success"> +8.2% vs last month
+                            <span class="card-nums"> 1,243</span> <span class="cards-percent text-success"> +8.2% vs last
+                                month
                             </span>
                         </div>
                         <div>
@@ -26,7 +27,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Active Subscriber</span><br>
-                            <span class="card-nums"> 984</span><span class="cards-percent text-success"> +4.7% Active Subscriber
+                            <span class="card-nums"> 984</span><span class="cards-percent text-success"> +4.7% Active
+                                Subscriber
                             </span>
                         </div>
                         <div>
@@ -74,9 +76,9 @@
         <div class="row g-4 align-items-stretch">
             <!-- Subscriber Growth -->
             <div class=" col-lg-7">
-                <div class="sub-growth-card h-100 d-flex flex-column">
+                <div class="div-card h-100 d-flex flex-column">
                     <!-- Header -->
-                    <div class="header-section mb-3">
+                    <div >
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
                         </div>
@@ -86,7 +88,7 @@
 
             <!-- Performance Metrics -->
             <div class=" col-lg-5">
-                <div class="performance-card d-flex flex-column justify-content-between">
+                <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Performance Metrics</h4>
                         <div class="dropdown">
@@ -106,7 +108,7 @@
         <div class="row g-4 align-items-stretch mt-2">
             <!-- Activities -->
             <div class=" col-lg-4">
-                <div class="middle-card d-flex flex-column justify-content-between">
+                <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Activities</h4>
                         <div class="dropdown">
@@ -124,7 +126,7 @@
 
             <!-- Traffic Sources -->
             <div class=" col-lg-4">
-                <div class="middle-card d-flex flex-column justify-content-between">
+                <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Traffic Sources</h4>
                         <div class="dropdown">
@@ -142,7 +144,7 @@
 
             <!-- Top Interests -->
             <div class="col-lg-4">
-                <div class="middle-card d-flex flex-column justify-content-between">
+                <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Top Interests</h4>
                         <div class="dropdown">
@@ -162,9 +164,9 @@
         <div class="row g-4 align-items-stretch mt-2">
             <!-- Subscriber  -->
             <div class=" col-lg-7">
-                <div class="sub-growth-card h-100 d-flex flex-column">
+                <div class="div-card h-100 d-flex flex-column">
                     <!-- Header -->
-                    <div class="header-section mb-3">
+                    <div >
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscribers</h4>
                         </div>
@@ -174,7 +176,7 @@
 
             <!-- Recent Activity -->
             <div class=" col-lg-5">
-                <div class="performance-card d-flex flex-column justify-content-between">
+                <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Recent Activity</h4>
                         <div class="dropdown">

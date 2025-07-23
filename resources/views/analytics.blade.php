@@ -22,7 +22,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col">
                 <div class="card h-100 mb-2">
                     <div class="d-flex justify-content-between p-3">
@@ -40,7 +40,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col">
                 <div class="card h-100 mb-2">
                     <div class="d-flex justify-content-between p-3">
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col">
                 <div class="card h-100 mb-2">
                     <div class="d-flex justify-content-between p-3">
@@ -76,7 +76,7 @@
                 </div>
             </div>
 
-            
+
             <div class="col">
                 <div class="card h-100 mb-2">
                     <div class="d-flex justify-content-between p-3">
@@ -93,7 +93,129 @@
                     </p>
                 </div>
             </div>
-        
+
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+            <!--Engagement Score Metrics -->
+            <div class=" col-lg-7">
+                <div class="div-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Engagement Score Metrics</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Interests -->
+            <div class=" col-lg-5">
+                <div class="div-card d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Top Interests</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch mt-2">
+            <!--Engagement Metrics -->
+            <div class=" col-lg-8">
+                <div class="div-card h-100 d-flex flex-column">
+                    <!-- Header -->
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 db-cards-title">Engagement Metrics</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conversion Funnel -->
+            <div class=" col-lg-4 ">
+                <div class="div-card  d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Conversion Funnel</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch mt-2">
+            <!--Audience Growth -->
+            <div class=" col-lg-6">
+                <div class="div-card h-100 d-flex flex-column">
+                    <!-- Header -->
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 db-cards-title">Audience Growth</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activities -->
+            <div class=" col-lg-3 ">
+                <div class="div-card  d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Activities</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Traffic -->
+            <div class=" col-lg-3 ">
+                <div class="div-card  d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Top Traffic</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 align-items-stretch mt-2">
+            <!--Hot Leads -->
+            <div class=" col-lg-8">
+                <div class="div-card h-100 d-flex flex-column">
+                    <!-- Header -->
+                    <div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h4 class="mb-0 db-cards-title">Hot Leads</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flags -->
+            <div class=" col-lg-4 ">
+                <div class="div-card  d-flex flex-column justify-content-between">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title">Flags</h4>
+                    </div>
+
+                    <div class="chart-wrapper">
+                        <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>
