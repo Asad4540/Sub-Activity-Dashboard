@@ -11,7 +11,8 @@
     --border-color: #D9E1E7;
     --required-color: #F00;
     --btn-light-color: #FEFEFE;
-    --btn-primary-color: #3A36DB;
+    --btn-primary-color: #5D5FEF;
+    --btn-border: #E3E3E3;
     --btn-danger-bg: rgba(234, 58, 61, 0.40);
     --btn-danger-color: #EA3A3D;
     --success-color: #1AD598;
@@ -19,7 +20,41 @@
 }
 
 .btn-primary {
-    background-color: var(--btn-primary-color) !important;
+    background: var(--btn-primary-color);
+    color: var(--bg-color);
+    display: flex;
+    width: 81px;
+    height: 44px;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    border: 1px solid var(--btn-border);
+
+}
+
+.btn-secondary {
+    background: var(--bg-color);
+    display: flex;
+    width: 104px;
+    height: 44px;
+    padding: 10px 22px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid var(--btn-border);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
 }
 
 /* ----------------Home Page--------------------------  */
@@ -112,7 +147,7 @@
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
-.table-cell-py td{
+.table-cell-py td {
     padding-top: 1rem;
     padding-bottom: 0.75rem;
     color: #585858;
@@ -124,7 +159,7 @@
     text-transform: lowercase;
 }
 
-b{
+b {
     color: #000;
 }
 
