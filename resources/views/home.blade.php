@@ -10,7 +10,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Total Subscribers </span><br>
-                            <span class="card-nums"> 1,243</span>
+                            <span class="card-nums"> 1,243</span> <span class="cards-percent text-success"> +8.2% vs last month
+                            </span>
                         </div>
                         <div>
                             <img src="{{ asset('assets/images/blue-profile.png') }}" alt="">
@@ -25,7 +26,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Active Subscriber</span><br>
-                            <span class="card-nums"> 984</span>
+                            <span class="card-nums"> 984</span><span class="cards-percent text-success"> +4.7% Active Subscriber
+                            </span>
                         </div>
                         <div>
                             <img src="{{ asset('assets/images/green-profile.png') }}" alt="">
@@ -40,7 +42,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">New Registrations </span><br>
-                            <span class="card-nums"> 150</span>
+                            <span class="card-nums"> 150</span><span class="cards-percent text-danger"> -2.1% vs last month.
+                            </span>
                         </div>
                         <div>
                             <img src="{{ asset('assets/images/violet-profile.png') }}" alt="">
@@ -55,7 +58,8 @@
                 <div class="card  h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Downloads </span><br>
-                            <span class="card-nums"> 500</span>
+                            <span class="card-nums"> 500</span><span class="cards-percent text-success"> +12.3% Downloads
+                            </span>
                         </div>
                         <div>
                             <img src="{{ asset('assets/images/orange-profile.png') }}" alt="">
