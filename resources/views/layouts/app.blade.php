@@ -104,11 +104,46 @@
         <div id="app" class="col-xxl-10 col-md-9 px-0">
             <nav class="navbar navbar-expand-md navbar-light sticky-top">
                 <div class="container-fluid ">
-                    <div class="navbar-header ">
-                        <h2 class="navbar-brand m-0 p-0">Welcome Back, <b>Admin</b>!</h2>
+                    @php
+                        $routes = [
+                            'home' => [
+                                'title' => 'Welcome Back, <b>Admin</b>!',
+                                'subtitle' => 'Stay updated with your recent progress and stats.',
+                                'html' => true
+                            ],
+                            'subscribers' => [
+                                'title' => 'Subscribers Lists',
+                                'subtitle' => 'Dashboard/Subscribers Lists'
+                            ],
+                            'analytics' => [
+                                'title' => 'Sales Analytics',
+                                'subtitle' => 'Dashboard/Analytics'
+                            ],
+                            'settings' => [
+                                'title' => 'Settings',
+                                'subtitle' => 'Dashboard/Settings'
+                            ]
+                        ];
 
-                        <p class="m-0 nav-breadcrumb">Stay updated with your recent progress and stats.</p>
-                    </div>
+                        $current = collect($routes)->first(function ($_, $key) {
+                            return request()->is($key);
+                        });
+                    @endphp
+
+                    @if ($current)
+                        <div class="navbar-header">
+                            <h2 class="navbar-brand m-0 p-0">
+                                @if (!empty($current['html']))
+                                    {!! $current['title'] !!}
+                                @else
+                                    {{ $current['title'] }}
+                                @endif
+                            </h2>
+                            <p class="m-0 nav-breadcrumb">
+                                {{ $current['subtitle'] }}
+                            </p>
+                        </div>
+                    @endif
 
                     <button class="navbar-toggler" type="button" id="sidebarToggler"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
