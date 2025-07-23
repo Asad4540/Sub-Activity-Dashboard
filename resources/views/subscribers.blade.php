@@ -4,7 +4,7 @@
     <div class="mx-4 p-3 subs-div">
         <div class="d-flex justify-content-between">
             <div><input type="search" name="" id=""></div>
-            <div class="d-flex justify-content-between gap-3">
+            <div class="d-flex justify-content-between gap-3 border border-2 px-2  rounded-pill">
                 <p>All</p>
                 <p>Active</p>
                 <p>Inactive</p>
@@ -156,6 +156,28 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="d-flex align-items-center justify-content-between px-2">
+                <div>
+                    <p>Showing 10 of 1,243 subscribers </p>
+                </div>
+                <div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination gap-3">
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+
+                        </ul>
+                    </nav>
+                </div>
+                <div>
+                    <ul class="d-flex gap-2">
+                        <button class="btn-secondary">Previous</button>
+                        <button class="btn-primary">Next</button>
+                    </ul>
+                </div>
+
+            </div>
         </div>
     </div>
 @endsection
