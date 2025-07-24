@@ -24,7 +24,7 @@
     background: var(--btn-primary-color);
     color: var(--bg-color);
     display: flex;
-    width: 81px;
+    /* width: 81px; */
     height: 44px;
     padding: 10px 22px;
     justify-content: center;
@@ -97,24 +97,6 @@
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
 }
 
-/* .performance-card {
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    
-    background: var(--Secondary-Primary-White, #FFF);
-    flex-shrink: 0;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
-}
-
-.middle-card {
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 1.5rem;
-    background: var(--Secondary-Primary-White, #FFF);
-    flex-shrink: 0;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.16);
-} */
-
 .header-section {
     padding: 1.5rem 1.5rem 0;
 }
@@ -185,6 +167,157 @@ b {
     font-style: normal;
     font-weight: 400;
     line-height: 19.758px;
+}
+
+/* ------------------------------Settings------------------------------- */
+.nav-pills .nav-link {
+    border-radius: 0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+    color: var(--btn-primary-color);
+    border-left: 4px solid var(--btn-primary-color);
+    font-weight: bold;
+    background: linear-gradient(to right, #eee 5%, transparent 20%);
+}
+
+.tab-content>.tab-pane {
+    padding: 1rem;
+}
+
+.tabs-card {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+}
+
+.nav-pills {
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 19px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid var(--border-color);
+}
+
+.tab-wrapper {
+    flex: 1;
+    background-color: var(--bg-color);
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid var(--border-color);
+}
+
+.settings-title {
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.settings-sub-title {
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-text {
+    color: var(--primary-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.password-text {
+    color: var(--light-color);
+    font-family: Poppins;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
 
 /* ------------------------------------------------------------------------     */
