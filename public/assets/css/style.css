@@ -187,6 +187,53 @@ b {
     line-height: 19.758px;
 }
 
+.nav-pills .nav-link {
+    border-radius: 0;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    color: var(--secondary-color);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-pills .nav-link.active {
+    background-color: transparent;
+    color: var(--btn-primary-color);
+    border-left: 4px solid var(--btn-primary-color);
+    font-weight: bold;
+    background: linear-gradient(to right, #eee 5%, transparent 20%);
+}
+
+.tab-content>.tab-pane {
+    padding: 1rem;
+}
+
+.tabs-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: flex;
+}
+
+.nav-pills {
+    flex-direction: column;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 19px;
+    box-shadow: -1px 7px 11.7px 0 rgba(0, 0, 0, 0.08);
+
+}
+
+.tab-wrapper {
+    flex: 1;
+    background-color: var(--bg-color);
+    border-radius: 19px;
+    box-shadow: -1px 7px 11.7px 0 rgba(0, 0, 0, 0.08);
+}
+
 /* ------------------------------------------------------------------------     */
 
 
