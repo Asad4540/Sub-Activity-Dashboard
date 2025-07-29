@@ -163,6 +163,60 @@
                     <p> <span class="settings-title">Device & Login Info</span><br>
                         <span class="settings-sub-title">Track your recent logins and connected devices.</span>
                     </p><br>
+                    <div class="px-4">
+                        <table class="table table-hover table-cell-py">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Device Type</th>
+                                    <th scope="col">Browser</th>
+                                    <th scope="col">IP Location</th>
+                                    <th scope="col">Last Login</th>
+                                    <th scope="col">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>MacBook Air</td>
+                                    <td>Chrome</td>
+                                    <td>New York</td>
+                                    <td>Today, 3:15 PM</td>
+                                    <td><a href="#">Logout</a></td>
+                                </tr>
+                                <tr>
+                                    <td>iPhone 14</td>
+                                    <td>Safari</td>
+                                    <td>Los Angeles</td>
+                                    <td>Yesterday, 11:47 AM</td>
+                                    <td><a href="#">Logout</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Windows PC</td>
+                                    <td>Edge</td>
+                                    <td>Chicago</td>
+                                    <td>Today, 10:22 AM</td>
+                                    <td><a href="#">Logout</a></td>
+                                </tr>
+                                <tr>
+                                    <td>iPad Pro</td>
+                                    <td>Safari</td>
+                                    <td>Seattle</td>
+                                    <td>2 days ago, 6:05 PM</td>
+                                    <td><a href="#">Logout</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Linux Laptop</td>
+                                    <td>Firefox</td>
+                                    <td>Berlin</td>
+                                    <td>Today, 7:49 AM</td>
+                                    <td><a href="#">Logout</a></td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
                 </div>
             </div>
         </div>
