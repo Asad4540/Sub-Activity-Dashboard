@@ -99,9 +99,9 @@
                         </div><br>
                         <p class="password-text">Enhancing Digital Security by Requiring Both a Password and a Secondary
                             Verification Method to <br> Confirm User Identity and Prevent Unauthorized Access.</p>
-                        <div class="d-flex justify-content-end">
-                            <button class="btn-primary">Update Password </button>
-                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn-primary">Update Password </button>
                     </div>
                 </div>
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
@@ -110,6 +110,51 @@
                         <p> <span class="settings-title">Notification Preferences</span><br>
                             <span class="settings-sub-title">Manage your alerts, updates, and email preferences.</span>
                         </p><br>
+                        <div class="px-4">
+                            <div class="d-flex justify-content-between align-items-top mb-2">
+                                <div>
+                                    <p class="input-text">Email Notifications </p>
+                                    <p class="password-text">Receive email updates about your account activity</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-top mb-2">
+                                <div>
+                                    <p class="input-text">Push Notifications </p>
+                                    <p class="password-text">Receive push notifications on your mobile device</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-top mb-2">
+                                <div>
+                                    <p class="input-text">SMS Notifications </p>
+                                    <p class="password-text">Receive text messages for important updates</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-top mb-2">
+                                <div>
+                                    <p class="input-text">Marketing Communications </p>
+                                    <p class="password-text">Receive promotional offers and updates</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn-primary">Save Preferences </button>
+                        </div>
                     </div>
                 </div>
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
