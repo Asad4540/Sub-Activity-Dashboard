@@ -169,6 +169,32 @@ b {
     line-height: 19.758px;
 }
 
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-container .search-icon {
+    position: absolute;
+    left: 10px;
+    top: 46%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.search-container input.tableSearch {
+    width: 100%;
+    padding: 6px 8px 8px 36px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: 13px;
+}
+
+
+
 /* ------------------------------Settings------------------------------- */
 .nav-pills .nav-link {
     border-radius: 0;
