@@ -13,10 +13,16 @@
                 <input type="search" class="tableSearch border border-2" placeholder="Search Subscriber..." />
             </div>
 
-            <div class="d-flex justify-content-between gap-3 border border-2 px-2  rounded-pill">
-                <p>All</p>
-                <p>Active</p>
-                <p>Inactive</p>
+            <!-- <div class="">
+                            <p>All</p>
+                            <p>Active</p>
+                            <p>Inactive</p>
+                        </div> -->
+
+            <div class="toggle-container">
+                <div class="toggle-option active" data-status="all">All</div>
+                <div class="toggle-option" data-status="active">Active</div>
+                <div class="toggle-option" data-status="inactive">Inactive</div>
             </div>
         </div>
         <div class="mt-2 table-responsive">
@@ -190,3 +196,18 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        const toggles = document.querySelectorAll('.toggle-option');
+
+        toggles.forEach(btn => {
+            btn.addEventListener('click', () => {
+                toggles.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const status = btn.getAttribute('data-status');
+                console.log('Selected status:', status);
+            });
+        });
+    </script>
+@endpush

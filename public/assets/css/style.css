@@ -193,6 +193,28 @@ b {
     border-radius: 13px;
 }
 
+.toggle-container {
+    display: flex;
+    background-color: #eee;
+    border-radius: 30px;
+    padding: 2px;
+}
+
+.toggle-option {
+    padding: 8px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--grey-color);
+    transition: all 0.3s ease;
+}
+
+.toggle-option.active {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 
 /* ------------------------------Settings------------------------------- */
