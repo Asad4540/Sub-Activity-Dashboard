@@ -78,7 +78,7 @@
             <div class=" col-lg-7">
                 <div class="div-card h-100 d-flex flex-column">
                     <!-- Header -->
-                    <div >
+                    <div>
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
                         </div>
@@ -119,7 +119,10 @@
                     </div>
 
                     <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                        <canvas id="activityChart" width="200px" height="auto"></canvas>
+                    </div>
+                    <div class="mt-3">
+
                     </div>
                 </div>
             </div>
@@ -137,7 +140,7 @@
                     </div>
 
                     <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                        <canvas id="trafficChart" width="250" height="250"></canvas>
                     </div>
                 </div>
             </div>
@@ -154,8 +157,8 @@
                         </div>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                    <div class="">
+                        <canvas id="interestsChart" width="250px" height="250px"></canvas>
                     </div>
                 </div>
             </div>
@@ -166,9 +169,72 @@
             <div class=" col-lg-7">
                 <div class="div-card h-100 d-flex flex-column">
                     <!-- Header -->
-                    <div >
+                    <div>
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscribers</h4>
+                        </div>
+                        <div class="mt-2 table-responsive">
+                            <table class="table table-hover table-cell-py">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">NAME</th>
+                                        <th scope="col">EMAIL</th>
+                                        <th scope="col">DESIGNATON</th>
+                                        <th scope="col">COMPANY</th>
+                                       
+                                        <th scope="col">STATUS</th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><b>John Doe</b></td>
+                                        <td>johndoe@example.com</td>
+                                        <td>Software Engineer</td>
+                                        <td>Tech Innovations</td>
+                                       
+                                        <td>Active</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><b>Jane Smith</b></td>
+                                        <td>janesmith@example.com</td>
+                                        <td>Product Manager</td>
+                                        <td>GlobalTech</td>
+                                      
+                                        <td>Inactive</td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td><b>Michael Johnson</b></td>
+                                        <td>michael.johnson@example.com</td>
+                                        <td>UX Designer</td>
+                                        <td>Creative Labs</td>
+                                        <td>Active</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><b>Jane Smith</b></td>
+                                        <td>amylee@example.com</td>
+                                        <td>Marketing Lead</td>
+                                        <td>Visionary Co.</td>
+                                        <td>Active</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td><b>David Brown</b></td>
+                                        <td>david.brown@example.com</td>
+                                        <td>Data Scientist</td>
+                                        <td>InnovaTech</td>
+                                        <td>Inactive</td>
+                                      
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class="d-flex align-items-center justify-content-end px-2">
+                                <button class="btn-primary">View all</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -196,91 +262,167 @@
 
 @endsection
     @push('scripts')
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
-            // Chart.js configuration
-            const ctx = document.getElementById('rfpChart').getContext('2d');
-            const rfpChart = new Chart(ctx, {
-                type: 'bar',
+
+            //ACTIVITES CHART
+            document.addEventListener('DOMContentLoaded', function () {
+                const ctx = document.getElementById('activityChart').getContext('2d');
+                const activityChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [
+                            {
+                                label: 'Login Activities',
+                                data: [120, 190, 170, 220, 160, 190, 200],
+                                borderColor: '#C084FC',
+                                backgroundColor: 'rgba(192, 132, 252, 0.2)',
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Content Views',
+                                data: [200, 300, 400, 350, 300, 320, 280],
+                                borderColor: '#3B82F6',
+                                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Downloads',
+                                data: [250, 200, 180, 160, 140, 130, 120],
+                                borderColor: '#F87171',
+                                backgroundColor: 'rgba(248, 113, 113, 0.2)',
+                                tension: 0.4
+                            },
+                            {
+                                label: 'Event Registration',
+                                data: [50, 70, 90, 110, 130, 150, 170],
+                                borderColor: '#34D399',
+                                backgroundColor: 'rgba(52, 211, 153, 0.2)',
+                                tension: 0.4
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    color: '#f3f3f3'
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            // TRAFFIC CHART  
+            const ctx = document.getElementById('trafficChart').getContext('2d');
+            const trafficChart = new Chart(ctx, {
+                type: 'pie',
                 data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    labels: ['Direct', 'Organic', 'Social', 'Referral'],
                     datasets: [{
-                        label: 'RFP Submitted',
-                        data: [7, 10, 11, 12, 8, 6, 4, 5, 8, 6, 5, 4, 6, 5, 3, 4, 6, 8, 9, 10, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 4],
-                        backgroundColor: '#3b82f6',
-                        borderColor: '#3b82f6',
-                        borderWidth: 0,
-                        borderRadius: 2,
-                        borderSkipped: false,
-                        barThickness: 20, // 👈 Adjust this value to control bar width (e.g., 8-12 for slim bars)
+                        data: [50, 10, 15, 25],
+                        backgroundColor: [
+                            '#66b3ff',  // Direct - Blue
+                            '#9de5d5',  // Organic - Mint
+                            '#a68bf6',  // Social - Purple
+                            '#ffb454'   // Referral - Orange
+                        ],
+                        borderWidth: 0
                     }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
                     plugins: {
                         legend: {
-                            display: false
-                        },
-                        tooltip: {
-                            backgroundColor: '#1f2937',
-                            titleColor: '#ffffff',
-                            bodyColor: '#ffffff',
-                            borderColor: '#374151',
-                            borderWidth: 1,
-                            cornerRadius: 8,
-                            displayColors: false,
-                            callbacks: {
-                                title: function (context) {
-                                    return '20th March 2020';
+                            position: 'right',
+                            labels: {
+                                color: '#666',
+                                boxWidth: 12,
+                                padding: 20,
+                                font: {
+                                    weight: '500',
+                                    size: 14
                                 },
-                                label: function (context) {
-                                    return '20 RFP Submitted +6.24%';
+                                generateLabels: function (chart) {
+                                    const data = chart.data;
+                                    const total = data.datasets[0].data.reduce((a, b) => a + b, 0);
+                                    return data.labels.map((label, i) => {
+                                        const value = data.datasets[0].data[i];
+                                        const percentage = Math.round((value / total) * 100);
+                                        return {
+                                            text: `${label} (${percentage}%)`,
+                                            fillStyle: data.datasets[0].backgroundColor[i],
+                                            strokeStyle: '#fff',
+                                            lineWidth: 1,
+                                            hidden: false,
+                                            index: i
+                                        };
+                                    });
                                 }
                             }
-
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false
-                            },
-                            border: {
-                                display: false
-                            },
-                            ticks: {
-                                color: '#6b7280',
-                                font: {
-                                    size: 12
-                                }
-                            }
-                        },
-                        y: {
-                            beginAtZero: true,
-                            max: 16,
-                            grid: {
-                                color: '#f3f4f6',
-                                drawBorder: false
-                            },
-                            border: {
-                                display: false
-                            },
-                            ticks: {
-                                color: '#6b7280',
-                                font: {
-                                    size: 12
-                                },
-                                stepSize: 2
-                            }
-                        }
-                    },
-                    elements: {
-                        bar: {
-                            borderRadius: 2
                         }
                     }
                 }
             });
+
+
+            //INTEREST CHART  
+            document.addEventListener('DOMContentLoaded', function () {
+                const ctx = document.getElementById('interestsChart')?.getContext('2d');
+                if (!ctx) {
+                    console.warn('Canvas element with ID "interestsChart" not found!');
+                    return;
+                }
+
+                const interestsChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['AI/ML', 'Backup & DR', 'Cloud Tech', 'IT', 'Data Security', 'Infrastructure', 'Cybersecurity', 'DevOps'],
+                        datasets: [{
+                            label: 'Engagement %',
+                            data: [65, 35, 25, 20, 10, 28, 12, 18],
+                            backgroundColor: [
+                                '#a68bf6', '#66b3ff', '#ff9130', '#9de5d5',
+                                '#6d6af6', '#96c4f5', '#5ee84b', '#f7d6a3'
+                            ],
+                            borderRadius: 5,
+                            barThickness: 30
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: { color: '#999' }
+                            },
+                            x: {
+                                ticks: {
+                                    color: '#000',
+                                    font: { size: 14, weight: 'bold' }
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+
+
         </script>
+
     @endpush

@@ -370,10 +370,6 @@ input:checked+.slider:before {
 
 /* ------------------------------------------------------------------------     */
 
-
-
-
-
 @media (max-width: 992px) {
     .chart-container {
         height: 350px;
