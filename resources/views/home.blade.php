@@ -28,7 +28,6 @@
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Active Subscriber</span><br>
                             <span class="card-nums"> 984</span><span class="cards-percent text-success"> +4.7% Active
-                                Subscriber
                             </span>
                         </div>
                         <div>
@@ -75,40 +74,90 @@
 
         <div class="row g-4 align-items-stretch">
             <!-- Subscriber Growth -->
-            <div class=" col-lg-7">
+            <div class=" col-lg-8">
                 <div class="div-card h-100 d-flex flex-column">
-                    <!-- Header -->
                     <div>
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
+                            <div class="toggle-container">
+                                <div class="toggle-option active" data-status="all">All</div>
+                                <div class="toggle-option" data-status="active">Active Subscriber</div>
+                                <div class="toggle-option" data-status="new">New Registrations</div>
+                                <div class="toggle-option" data-status="downloads">Downloads</div>
+
+                            </div>
+                        </div>
+                        <div class="pt-4 d-flex justify-content-center">
+                            <canvas id="subscriberGrowthChart"></canvas>
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Performance Metrics -->
-            <div class=" col-lg-5">
-                <div class="div-card  d-flex flex-column justify-content-between">
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0 db-cards-title">Performance Metrics</h4>
-                        <div class="dropdown">
-                            <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
-                                View Details
-                            </button>
+                        <h5 class="mb-0">Performance Metrics</h5>
+                        <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
+                            View Details
+                        </button>
+                    </div>
+
+                    <!-- Metrics Progress Bars -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Engagement Rate</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-success" style="width: 65%;"></div>
                         </div>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Content Popularity</span>
+                            <span>78%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-primary" style="width: 78%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>User Retention</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-warning" style="width: 42%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>Conversion Rate</span>
+                            <span>23%</span>
+                        </div>
+                        <div class="progress" style="height: 6px;">
+                            <div class="progress-bar bg-purple" style="width: 23%; background-color: #9b59b6;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Donut Chart -->
+                    <div class="pt-4 d-flex justify-content-center">
+                        <canvas id="metricsDonutChart" class="donut"></canvas>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <div class="row g-4 align-items-stretch mt-2">
             <!-- Activities -->
             <div class=" col-lg-4">
-                <div class="div-card  d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Activities</h4>
                         <div class="dropdown">
@@ -119,9 +168,49 @@
                     </div>
 
                     <div class="chart-wrapper">
-                        <canvas id="activityChart" width="200px" height="auto"></canvas>
+                        <canvas id="activityChart" width="250px" height="auto"></canvas>
                     </div>
                     <div class="mt-3">
+                        <div class="row gap-3">
+                            <div class="col border border-1 rounded p-2 px-3">
+                                <div class="">
+                                    <img src="{{ asset('assets/images/login-dot.png') }}" alt="">
+                                    <span class="activity-text">Login Activities</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="activity-no">442</span>
+                                </div>
+                            </div>
+                            <div class="col border border-1 rounded p-2 px-3">
+                                <div class="">
+                                    <img src="{{ asset('assets/images/view-dot.png') }}" alt="">
+                                    <span class="activity-text">Content Views</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="activity-no">632</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row gap-3 mt-3">
+                            <div class="col border border-1 rounded p-2 px-3">
+                                <div class="">
+                                    <img src="{{ asset('assets/images/download-dot.png') }}" alt="">
+                                    <span class="activity-text">Downloads</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="activity-no">502</span>
+                                </div>
+                            </div>
+                            <div class="col border border-1 rounded p-2 px-3">
+                                <div class="">
+                                    <img src="{{ asset('assets/images/registration-dot.png') }}" alt="">
+                                    <span class="activity-text">Event Registration</span>
+                                </div>
+                                <div class="mt-1">
+                                    <span class="activity-no">150</span>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -181,9 +270,8 @@
                                         <th scope="col">EMAIL</th>
                                         <th scope="col">DESIGNATON</th>
                                         <th scope="col">COMPANY</th>
-                                       
                                         <th scope="col">STATUS</th>
-                                        
+
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -192,18 +280,18 @@
                                         <td>johndoe@example.com</td>
                                         <td>Software Engineer</td>
                                         <td>Tech Innovations</td>
-                                       
+
                                         <td>Active</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td><b>Jane Smith</b></td>
                                         <td>janesmith@example.com</td>
                                         <td>Product Manager</td>
                                         <td>GlobalTech</td>
-                                      
+
                                         <td>Inactive</td>
-                                       
+
                                     </tr>
                                     <tr>
                                         <td><b>Michael Johnson</b></td>
@@ -211,7 +299,7 @@
                                         <td>UX Designer</td>
                                         <td>Creative Labs</td>
                                         <td>Active</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td><b>Jane Smith</b></td>
@@ -219,7 +307,7 @@
                                         <td>Marketing Lead</td>
                                         <td>Visionary Co.</td>
                                         <td>Active</td>
-                                        
+
                                     </tr>
                                     <tr>
                                         <td><b>David Brown</b></td>
@@ -227,7 +315,7 @@
                                         <td>Data Scientist</td>
                                         <td>InnovaTech</td>
                                         <td>Inactive</td>
-                                      
+
                                     </tr>
 
                                 </tbody>
@@ -241,7 +329,7 @@
             </div>
 
             <!-- Recent Activity -->
-            <div class=" col-lg-5">
+            <div class="col-lg-5">
                 <div class="div-card  d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Recent Activity</h4>
@@ -421,8 +509,117 @@
                 });
             });
 
+            //PERFORMANCE METRICS
+            document.addEventListener("DOMContentLoaded", function () {
+                const ctx = document.getElementById('metricsDonutChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Engagement', 'Popularity', 'Retention', 'Conversion'],
+                        datasets: [{
+                            data: [65, 78, 42, 23],
+                            backgroundColor: [
+                                '#2ecc71', // green
+                                '#3498db', // blue
+                                '#e67e22', // orange
+                                '#9b59b6'  // purple
+                            ],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        cutout: '65%',
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            });
 
+            //SUBSRIBER GROWTH
+            document.addEventListener("DOMContentLoaded", function () {
+                const ctx = document.getElementById("subscriberGrowthChart").getContext("2d");
 
+                // Gradients
+                const gradientGreen = ctx.createLinearGradient(0, 0, 0, 300);
+                gradientGreen.addColorStop(0, "rgba(0, 200, 83, 0.2)");
+                gradientGreen.addColorStop(1, "rgba(0, 200, 83, 0)");
+
+                const gradientBlue = ctx.createLinearGradient(0, 0, 0, 300);
+                gradientBlue.addColorStop(0, "rgba(63, 81, 181, 0.2)");
+                gradientBlue.addColorStop(1, "rgba(63, 81, 181, 0)");
+
+                const gradientOrange = ctx.createLinearGradient(0, 0, 0, 300);
+                gradientOrange.addColorStop(0, "rgba(255, 152, 0, 0.2)");
+                gradientOrange.addColorStop(1, "rgba(255, 152, 0, 0)");
+
+                const chart = new Chart(ctx, {
+                    type: "line",
+                    data: {
+                        labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Nov", "Dec"],
+                        datasets: [
+                            {
+                                label: "Active Subscribers",
+                                data: [0, 300, 600, 800, 900, 1500, 1200, 1400, 1700, 1500, 1200],
+                                fill: true,
+                                backgroundColor: gradientGreen,
+                                borderColor: "green",
+                                tension: 0.4,
+                            },
+                            {
+                                label: "New Registrations",
+                                data: [0, 0, 400, 700, 300, 600, 900, 1000, 1100, 1000, 900],
+                                fill: true,
+                                backgroundColor: gradientBlue,
+                                borderColor: "blue",
+                                tension: 0.4,
+                            },
+                            {
+                                label: "Downloads",
+                                data: [0, 0, 0, 300, 350, 0, 400, 600, 700, 600, 400],
+                                fill: true,
+                                backgroundColor: gradientOrange,
+                                borderColor: "orange",
+                                tension: 0.4,
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: { display: false }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    stepSize: 300,
+                                },
+                                grid: {
+                                    drawBorder: false
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+            });
+
+            const toggles = document.querySelectorAll('.toggle-option');
+            toggles.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    toggles.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const status = btn.getAttribute('data-status');
+                    console.log('Selected status:', status);
+                });
+            });
         </script>
 
     @endpush
