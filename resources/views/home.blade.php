@@ -79,7 +79,7 @@
                     <div>
                         <div class="d-flex justify-content-between align-items-center">
                             <h4 class="mb-0 db-cards-title">Subscriber Growth</h4>
-                            <div class="toggle-container">
+                            <div class="toggle-container subscriber-toggle">
                                 <div class="toggle-option active" data-status="all">All</div>
                                 <div class="toggle-option" data-status="active">Active Subscriber</div>
                                 <div class="toggle-option" data-status="new">New Registrations</div>
@@ -96,7 +96,7 @@
 
             <!-- Performance Metrics -->
             <div class="col-lg-4">
-                <div class="card shadow-sm p-4">
+                <div class="card h-100 shadow-sm p-4">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h5 class="mb-0">Performance Metrics</h5>
                         <button class="btn btn-sm d-flex align-items-center gap-2 a-link" type="button">
@@ -218,7 +218,7 @@
 
             <!-- Traffic Sources -->
             <div class=" col-lg-4">
-                <div class="div-card  d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Traffic Sources</h4>
                         <div class="dropdown">
@@ -236,7 +236,7 @@
 
             <!-- Top Interests -->
             <div class="col-lg-4">
-                <div class="div-card  d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Top Interests</h4>
                         <div class="dropdown">
@@ -330,7 +330,7 @@
 
             <!-- Recent Activity -->
             <div class="col-lg-5">
-                <div class="div-card  d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Recent Activity</h4>
                         <div class="dropdown">
@@ -342,6 +342,9 @@
 
                     <div class="chart-wrapper">
                         <!-- <canvas id="rfpChart"></canvas> -->
+                    </div>
+                    <div class="px-2">
+                        <button class="btn-primary w-100">View All Activity</button>
                     </div>
                 </div>
             </div>

@@ -134,7 +134,7 @@
     padding-left: 14px;
 }
 
-.donut{
+.donut {
     height: 250px !important;
 }
 
@@ -393,6 +393,11 @@ input:checked+.slider:before {
 }
 
 /* ------------------------------------------------------------------------     */
+@media (max-width: 1200px) {
+    .subscriber-toggle{
+        display: none;
+    }
+}
 
 @media (max-width: 992px) {
     .chart-container {
