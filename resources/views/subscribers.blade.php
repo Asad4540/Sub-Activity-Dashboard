@@ -13,12 +13,6 @@
                 <input type="search" class="tableSearch border border-2" placeholder="Search Subscriber..." />
             </div>
 
-            <!-- <div class="">
-                            <p>All</p>
-                            <p>Active</p>
-                            <p>Inactive</p>
-                        </div> -->
-
             <div class="toggle-container">
                 <div class="toggle-option active" data-status="all">All</div>
                 <div class="toggle-option" data-status="active">Active</div>

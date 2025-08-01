@@ -114,6 +114,30 @@
     color: var(--btn-primary-color)
 }
 
+.activity-text {
+    color: var(--Gray-400, #7A7A7A);
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 12.468px;
+}
+
+.activity-no {
+    color: var(--primary-color);
+    font-family: Inter;
+    font-size: 20.624px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 19.394px;
+    letter-spacing: -0.693px;
+    padding-left: 14px;
+}
+
+.donut {
+    height: 250px !important;
+}
+
 /* ---------------------------------------------------------------- */
 
 /* -----------------Subscriber Page---------  */
@@ -369,10 +393,11 @@ input:checked+.slider:before {
 }
 
 /* ------------------------------------------------------------------------     */
-
-
-
-
+@media (max-width: 1200px) {
+    .subscriber-toggle{
+        display: none;
+    }
+}
 
 @media (max-width: 992px) {
     .chart-container {
