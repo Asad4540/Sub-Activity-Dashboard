@@ -17,6 +17,8 @@
     --btn-danger-color: #EA3A3D;
     --success-color: #00C966;
     --text-danger: #DE202C;
+    --eng-score-thead: #F9FAFB;
+    --eng-score-thead-text: #ACACAD;
 
 }
 
@@ -392,9 +394,78 @@ input:checked+.slider:before {
     border-radius: 50%;
 }
 
+/* ----------------------------Analytics Page----------------------------------------------------- */
+
+.eng-score-thead {
+    background: var(--eng-score-thead);
+    color: var(--eng-score-thead-text);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16.03px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.038px;
+    text-transform: uppercase;
+}
+
+.eng-score-thead th {
+    padding: 30px 10px;
+}
+
+.eng-score-tr td {
+    padding: 25px 10px;
+    text-align: center;
+}
+
+.hot {
+    color: #227DFF;
+    background: #92BFFF24;
+    padding: 10px 35px;
+}
+
+.warm {
+    color: #098400;
+    background: #09840024;
+    padding: 10px 25px;
+}
+
+.cold {
+    color: #FF7700;
+    background: #FF770024;
+    padding: 10px 30px;
+}
+
+.conv-funel-thead {
+    background: var(--eng-score-thead);
+    color: var(--eng-score-thead-text);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16.03px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.038px;
+    text-transform: uppercase;
+}
+
+.conv-funel-tr td {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.activity-text {
+    color: #585858;
+    font-family: Poppins;
+    font-size: 14.838px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
 /* ------------------------------------------------------------------------     */
 @media (max-width: 1200px) {
-    .subscriber-toggle{
+    .subscriber-toggle {
         display: none;
     }
 }
