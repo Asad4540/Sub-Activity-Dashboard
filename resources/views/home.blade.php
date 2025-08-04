@@ -255,7 +255,7 @@
 
         <div class="row g-4 align-items-stretch mt-2">
             <!-- Subscriber  -->
-            <div class=" col-lg-7">
+            <div class=" col-lg-8">
                 <div class="div-card h-100 d-flex flex-column">
                     <!-- Header -->
                     <div>
@@ -329,7 +329,7 @@
             </div>
 
             <!-- Recent Activity -->
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <div class="div-card h-100 d-flex flex-column justify-content-between">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Recent Activity</h4>
@@ -340,8 +340,24 @@
                         </div>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                    <div class="d-flex gap-2 activity-text mb-3 align-items-center">
+                        <img src="{{ asset('assets/images/pp-activity.png') }}" alt="">
+                        <span>Emily Johnson joined as a new subscriber</span>
+                    </div>
+
+                    <div class="d-flex gap-2 activity-text mb-3 align-items-center">
+                        <img src="{{ asset('assets/images/pp-activity.png') }}" alt="">
+                        <span>Emily Johnson joined as a new subscriber</span>
+                    </div>
+
+                    <div class="d-flex gap-2 activity-text mb-3 align-items-center">
+                        <img src="{{ asset('assets/images/pp-activity.png') }}" alt="">
+                        <span>Emily Johnson joined as a new subscriber</span>
+                    </div>
+
+                    <div class="d-flex gap-2 activity-text mb-3 align-items-center ">
+                        <img src="{{ asset('assets/images/pp-activity.png') }}" alt="">
+                        <span>Emily Johnson joined as a new subscriber</span>
                     </div>
                     <div class="px-2">
                         <button class="btn-primary w-100">View All Activity</button>
@@ -477,10 +493,21 @@
                     return;
                 }
 
+                const labels = [
+                    'AI/ML',
+                    'Backup & DR',
+                    'Cloud Tech',
+                    'IT',
+                    'Data Security',
+                    'Infrastructure',
+                    'Cybersecurity',
+                    'DevOps'
+                ];
+
                 const interestsChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ['AI/ML', 'Backup & DR', 'Cloud Tech', 'IT', 'Data Security', 'Infrastructure', 'Cybersecurity', 'DevOps'],
+                        labels: labels,
                         datasets: [{
                             label: 'Engagement %',
                             data: [65, 35, 25, 20, 10, 28, 12, 18],
@@ -493,24 +520,42 @@
                         }]
                     },
                     options: {
+                        responsive: true,
                         plugins: {
                             legend: { display: false }
                         },
                         scales: {
                             y: {
                                 beginAtZero: true,
-                                ticks: { color: '#999' }
+                                ticks: {
+                                    color: '#999',
+                                    callback: function (value) {
+                                        return value + '%';
+                                    }
+                                }
+
                             },
                             x: {
                                 ticks: {
-                                    color: '#000',
-                                    font: { size: 14, weight: 'bold' }
+                                    color: '#999',
+                                    font: {
+                                        size: 7,
+                                        weight: ''
+                                    },
+                                    maxRotation: 0,
+                                    minRotation: 0,
+                                    callback: function (value, index, ticks) {
+                                        const label = labels[index];
+                                        // Auto-wrap long labels by space
+                                        return label.length > 10 ? label.split(' ') : label;
+                                    }
                                 }
                             }
                         }
                     }
                 });
             });
+
 
             //PERFORMANCE METRICS
             document.addEventListener("DOMContentLoaded", function () {

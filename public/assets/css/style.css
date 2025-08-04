@@ -435,6 +435,34 @@ input:checked+.slider:before {
     padding: 10px 30px;
 }
 
+.conv-funel-thead {
+    background: var(--eng-score-thead);
+    color: var(--eng-score-thead-text);
+    text-align: center;
+    font-family: Poppins;
+    font-size: 16.03px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20.038px;
+    text-transform: uppercase;
+}
+
+.conv-funel-tr td {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.activity-text {
+    color: #585858;
+    font-family: Poppins;
+    font-size: 14.838px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+
 /* ------------------------------------------------------------------------     */
 @media (max-width: 1200px) {
     .subscriber-toggle {
