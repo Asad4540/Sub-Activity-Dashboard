@@ -117,8 +117,8 @@
                         <h4 class="mb-0 db-cards-title">Top Interests</h4>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                    <div class="">
+                        <canvas id="interestsChart" width="250px" height="200px"></canvas>
                     </div>
                 </div>
             </div>
@@ -221,3 +221,52 @@
     </div>
 
 @endsection
+
+
+@push('scripts')
+    <script>
+
+        //INTEREST CHART  
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('interestsChart')?.getContext('2d');
+            if (!ctx) {
+                console.warn('Canvas element with ID "interestsChart" not found!');
+                return;
+            }
+
+            const interestsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['AI/ML', 'Backup & DR', 'Cloud Tech', 'IT', 'Data Security', 'Infrastructure', 'Cybersecurity', 'DevOps'],
+                    datasets: [{
+                        label: 'Engagement ',
+                        data: [165, 235, 125, 120, 110, 258, 122, 318],
+                        backgroundColor: [
+                            '#a68bf6', '#66b3ff', '#ff9130', '#9de5d5',
+                            '#6d6af6', '#96c4f5', '#5ee84b', '#f7d6a3'
+                        ],
+                        borderRadius: 5,
+                        barThickness: 30
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#999' }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#000',
+                                font: { size: 14, weight: 'bold' }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+@endpush
