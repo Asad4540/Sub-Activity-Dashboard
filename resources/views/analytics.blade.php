@@ -99,13 +99,45 @@
         <div class="row g-4 align-items-stretch">
             <!--Engagement Score Metrics -->
             <div class=" col-lg-7">
-                <div class="div-card d-flex flex-column justify-content-between">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <h4 class="mb-0 db-cards-title">Engagement Score Metrics</h4>
+                <div class="div-card h-100 d-flex flex-column ">
+                    <div class="d-flex align-items-center mb-3">
+                        <h4 class="mb-0 db-cards-title ">Engagement Score Metrics</h4>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <!-- <canvas id="rfpChart"></canvas> -->
+                    <div class="mt-2 table-responsive">
+                        <table class="table table-hover table-cell-py">
+                            <thead class="eng-score-thead">
+                                <tr>
+                                    <th scope="col">AUDIENCE</th>
+                                    <th scope="col">DESCRIPTION</th>
+                                    <th scope="col">SCORE RANGE</th>
+                                    <th scope="col">TIRE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="eng-score-tr">
+                                    <td>30%</td>
+                                    <td>Highly active: daily logins, downloads, shares</td>
+                                    <td>87</td>
+                                    <td><span class="hot">Hot</span></td>
+                                </tr>
+                                <tr class="eng-score-tr">
+                                    <td>40%</td>
+                                    <td>Moderate activity: reads articles occasionally</td>
+                                    <td>70</td>
+                                    <td><span class="warm">Warm</span></td>
+
+                                </tr>
+                                <tr class="eng-score-tr">
+                                    <td>25%</td>
+                                    <td>Low engagement: rarely active, at risk of churn</td>
+                                    <td>20</td>
+                                    <td><span class="cold">Cold</span></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
             </div>
