@@ -150,7 +150,7 @@
                     </div>
 
                     <div class="">
-                        <canvas id="interestsChart" width="250px" height="200px"></canvas>
+                        <canvas id="interestsChart" width="250px" height="140px"></canvas>
                     </div>
                 </div>
             </div>
@@ -158,17 +158,24 @@
 
         <div class="row g-4 align-items-stretch mt-2">
             <!--Engagement Metrics -->
-            <div class=" col-lg-8">
+            <div class="col-lg-8">
                 <div class="div-card h-100 d-flex flex-column">
-                    <div class="d-flex align-items-center">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Engagement Metrics</h4>
+                        <select id="metricSelector" class="form-select w-auto">
+                            <option value="articles" selected>Articles</option>
+                            <option value="time">Time spent</option>
+                            <option value="downloads">Downloads</option>
+                            <option value="repeat">Repeat visit</option>
+                        </select>
                     </div>
 
                     <div class="chart-wrapper">
-                        <canvas id="" width="250" height="250"></canvas>
+                        <canvas id="engagementChart" height="100"></canvas>
                     </div>
                 </div>
             </div>
+
 
 
             <!-- Conversion Funnel -->
@@ -314,12 +321,18 @@
                     scales: {
                         y: {
                             beginAtZero: true,
-                            ticks: { color: '#999' }
+                            ticks: { color: '#999' },
+                            grid: {
+                                display: false
+                            }
                         },
                         x: {
                             ticks: {
                                 color: '#999',
                                 font: { size: 8, weight: '' }
+                            },
+                            grid: {
+                                display: false
                             }
                         }
                     }
@@ -378,8 +391,7 @@
             }
         });
 
-        //Engagement metrics 
-
+        //Engagement metrics score
         document.addEventListener('DOMContentLoaded', function () {
             const ctx = document.getElementById('audienceChart')?.getContext('2d');
             if (!ctx) return;
@@ -455,6 +467,61 @@
                         }
                     }
                 }
+            });
+        });
+
+        //Engagement Metrics
+        document.addEventListener('DOMContentLoaded', function () {
+            const ctx = document.getElementById('engagementChart').getContext('2d');
+
+            // Sample datasets
+            const dataSets = {
+                articles: [100, 200, 400, 300, 450, 300, 600, 700, 900, 850, 800, 750],
+                time : [80, 120, 200, 500, 650, 90, 200, 600, 220, 110, 150, 0],
+                downloads: [50,40,23,50,60,41,25,26,40,40,50,60],
+                repeat:[80, 120, 200, 500, 650, 90, 200, 600, 220, 110, 150, 0],
+            };
+
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+
+            let chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: months,
+                    datasets: [{
+                        label: 'Articles',
+                        data: dataSets.articles,
+                        borderColor: '#00c853',
+                        backgroundColor: ctx.createLinearGradient(0, 0, 0, 300),
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        borderDash: [5, 5],
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            ticks: { color: '#aaa' },
+                            grid: { color: '#eee' }
+                        },
+                        x: {
+                            ticks: { color: '#aaa' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+
+            // Dropdown change logic
+            document.getElementById('metricSelector').addEventListener('change', function () {
+                const selected = this.value;
+                chart.data.datasets[0].data = dataSets[selected];
+                chart.data.datasets[0].label = this.options[this.selectedIndex].text;
+                chart.update();
             });
         });
 

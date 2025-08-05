@@ -88,7 +88,7 @@
                             </div>
                         </div>
                         <div class="pt-4 d-flex justify-content-center">
-                            <canvas id="subscriberGrowthChart"></canvas>
+                            <canvas id="subscriberGrowthChart" height="120px" width=""></canvas>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
         <div class="row g-4 align-items-stretch mt-2">
             <!-- Activities -->
             <div class=" col-lg-4">
-                <div class="div-card h-100 d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Activities</h4>
                         <div class="dropdown">
@@ -218,7 +218,7 @@
 
             <!-- Traffic Sources -->
             <div class=" col-lg-4">
-                <div class="div-card h-100 d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Traffic Sources</h4>
                         <div class="dropdown">
@@ -228,15 +228,15 @@
                         </div>
                     </div>
 
-                    <div class="chart-wrapper">
-                        <canvas id="trafficChart" width="250" height="250"></canvas>
+                    <div class="chart-wrapper d-flex justify-content-center">
+                        <canvas id="trafficChart" class="traffic"></canvas>
                     </div>
                 </div>
             </div>
 
             <!-- Top Interests -->
             <div class="col-lg-4">
-                <div class="div-card h-100 d-flex flex-column justify-content-between">
+                <div class="div-card h-100 d-flex flex-column">
                     <div class="d-flex justify-content-between align-items-center mb-3">
                         <h4 class="mb-0 db-cards-title">Top Interests</h4>
                         <div class="dropdown">
@@ -247,7 +247,7 @@
                     </div>
 
                     <div class="">
-                        <canvas id="interestsChart" width="250px" height="250px"></canvas>
+                        <canvas id="interestsChart" width="250px" height="190px"></canvas>
                     </div>
                 </div>
             </div>
@@ -419,14 +419,10 @@
                         },
                         scales: {
                             x: {
-                                grid: {
-                                    display: false
-                                }
+                                display: false
                             },
                             y: {
-                                grid: {
-                                    color: '#f3f3f3'
-                                }
+                                display: false
                             }
                         }
                     }
@@ -532,6 +528,10 @@
                                     callback: function (value) {
                                         return value + '%';
                                     }
+                                },
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
                                 }
 
                             },
@@ -549,6 +549,10 @@
                                         // Auto-wrap long labels by space
                                         return label.length > 10 ? label.split(' ') : label;
                                     }
+                                },
+                                grid: {
+                                    display: false,
+                                    drawBorder: false
                                 }
                             }
                         }
