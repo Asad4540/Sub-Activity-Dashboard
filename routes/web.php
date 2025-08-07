@@ -24,7 +24,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 Route::get('/subscribers', [SubscribersController::class, 'index'])->name('subscribers');
 Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics');
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+
+//Dashboard Edit
+Route::get('/dashboard/edit', function () {
+    return view('partials.dashboardEdit');
+})->name('dashboard.edit');
+
+//Analytics Edit
+Route::get('/analytics/edit', function () {
+    return view('partials.analyticsEdit');
+})->name('analytics.edit');

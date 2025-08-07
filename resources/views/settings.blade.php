@@ -25,34 +25,34 @@
                         </p><br>
                         <form action="">
                             <div class="d-flex px-4 row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">First Name </label>
                                     <input type="text" class="form-control" placeholder="Royston">
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">Last Name </label>
                                     <input type="text" class="form-control" placeholder="fernandez">
                                 </div>
                             </div> <br>
                             <div class="d-flex px-4 row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">Email</label>
                                     <input type="text" class="form-control" placeholder="Roy.fernandez@gmai.com">
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">Phone Number </label>
                                     <input type="text" class="form-control" placeholder="+1 (256) 5684">
                                 </div>
                             </div> <br>
                             <div class="d-flex px-4 row">
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">Company </label>
                                     <input type="text" class="form-control" placeholder="Vereigen Media">
                                 </div>
 
-                                <div class="col-6">
+                                <div class="col-lg-6">
                                     <label for="" class="input-text">Job Designation</label>
                                     <input type="text" class="form-control" placeholder="marketing manager">
                                 </div>
@@ -76,12 +76,12 @@
                             <label for="" class="input-text">Current Password </label>
                             <input type="text" class="form-control" style="width:40.5%"> <br>
                             <div class="d-flex gap-4 row">
-                                <div class="col-5">
+                                <div class="col-lg-5">
                                     <label for="" class="input-text">New Password </label>
                                     <input type="text" class="form-control w-100">
                                 </div>
 
-                                <div class="col-5">
+                                <div class="col-lg-5">
                                     <label for="" class="input-text">Confirm New Password </label>
                                     <input type="text" class="form-control w-100">
                                 </div>

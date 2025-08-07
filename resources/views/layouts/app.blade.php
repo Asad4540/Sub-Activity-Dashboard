@@ -47,28 +47,34 @@
                 </div>
                 <div class="navbar-lis-container ">
                     <ul class="list-unstyled sidebar-lists">
-                        <li class="{{ request()->is('home') ? 'active' : '' }}">
+                        <li class="{{ request()->is('dashboard*') ? 'active' : '' }}">
                             <span><i class="bi bi-grid-1x2"></i></span>
-                            <a href="{{ url('/home') }}">Dashboard</a>
+                            <a href="{{ url('/dashboard')}}">Dashboard</a>
                         </li>
-                        <li class="{{ request()->is('subscribers') ? 'active' : '' }}">
+                        <li class="{{ request()->is('subscribers*') ? 'active' : '' }}">
                             <span><i class="bi bi-people"></i></span>
                             <a href="{{ url('/subscribers') }}">Subscribers</a>
                         </li>
-                        <li class="{{ request()->is('analytics') ? 'active' : '' }}">
+                        <li class="{{ request()->is('analytics*') ? 'active' : '' }}">
                             <span><i class="bi bi-bar-chart-line"></i></span>
                             <a href="{{ url('/analytics') }}">Analytics</a>
 
                         </li>
-                        <li class="{{ request()->is('settings') ? 'active' : '' }}">
+                        <li class="{{ request()->is('settings*') ? 'active' : '' }}">
                             <span><i class="bi bi-gear"></i></span>
                             <a href="{{ url('/settings') }}">Settings</a>
                         </li>
                         <li class="">
                             <span><i class="bi bi-box-arrow-right"></i></span>
-                            <a href="{{ url('/logout') }}">Logout</a>
-                        </li>
+                            <a href="#"
+                                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+                        </li>
                     </ul>
                     <!-- <p class="list-section-header">Admin Panel</p>
                     <ul class="list-unstyled sidebar-lists">
@@ -109,7 +115,7 @@
                 <div class="container-fluid ">
                     @php
                         $routes = [
-                            'home' => [
+                            'dashboard' => [
                                 'title' => 'Welcome Back, <b>Admin</b>!',
                                 'subtitle' => 'Stay updated with your recent progress and stats.',
                                 'html' => true
@@ -125,7 +131,16 @@
                             'settings' => [
                                 'title' => 'Settings',
                                 'subtitle' => 'Dashboard/Settings'
-                            ]
+                            ],
+                            'dashboard/edit' => [
+                                'title' => 'Dashboard Edit',
+                                'subtitle' => 'Dashboard/Edit'
+                            ],
+                            'analytics/edit' => [
+                                'title' => 'Analyitcs Edit',
+                                'subtitle' => 'Analyitcs/Edit'
+                            ],
+
                         ];
 
                         $current = collect($routes)->first(function ($_, $key) {
