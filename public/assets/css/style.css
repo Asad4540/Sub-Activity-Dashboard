@@ -137,7 +137,12 @@
 }
 
 .donut {
-    height: 250px !important;
+    height: 200px !important;
+}
+
+.traffic{
+    height: 350px !important;
+    
 }
 
 /* ---------------------------------------------------------------- */
