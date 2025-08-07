@@ -61,6 +61,16 @@
     text-transform: capitalize;
 }
 
+.custom-select-multiple-trigger {
+    color: var(--btn-primary-color);
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid var(--btn-primary-color);
+    background: var(--bg-light-color);
+    opacity: 1;
+    padding-left: 15px;
+}
+
 /* ----------------Home Page--------------------------  */
 
 .card {
@@ -141,9 +151,9 @@
     height: 200px !important;
 }
 
-.traffic{
+.traffic {
     height: 350px !important;
-    
+
 }
 
 /* ---------------------------------------------------------------- */

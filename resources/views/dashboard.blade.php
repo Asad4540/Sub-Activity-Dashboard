@@ -3,11 +3,12 @@
 @section('content')
 
     <div class="container-fluid px-4">
-        
+
         <div class="d-flex justify-content-end gap-2 mb-3">
             <button class="btn-secondary" style="padding:0 !important">Export &nbsp;<i class="bi bi-arrow-down-square"
                     style="color:var(--btn-primary-color)"></i></button>
-            <button class="btn-primary ">Edit &nbsp; <i class="bi bi-pencil-square" style="color:#fff"></i> </button>
+            <button class="btn-primary" onclick="window.location.href='{{ route('dashboard.edit') }}'">Edit &nbsp; <i
+                    class="bi bi-pencil-square" style="color:#fff"></i> </button>
         </div>
 
 
