@@ -2,7 +2,12 @@
 
 @section('content')
 
-    <div class="mx-4 p-3">
+    <div class="px-4">
+        <div class="d-flex justify-content-end gap-2 mb-3">
+            <button class="btn-secondary" style="padding:0 !important">Export &nbsp;<i class="bi bi-arrow-down-square"
+                    style="color:var(--btn-primary-color)"></i></button>
+            <button class="btn-primary ">Edit &nbsp; <i class="bi bi-pencil-square" style="color:#fff"></i> </button>
+        </div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-5 g-4 mb-4">
 
             <div class="col">
