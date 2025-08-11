@@ -23,7 +23,7 @@
                         <div class="d-flex justify-content-between">
                             <p class="settings-title"> Subscribers Growth</p>
                             <select name="months" id="" class="custom-select-multiple-trigger">
-                                <option value="january" selected disabled>january</option>
+                                <option value="january" selected >january</option>
                                 <option value="february">february</option>
                                 <option value="march">march</option>
                                 <option value="april">april</option>
