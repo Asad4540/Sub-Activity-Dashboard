@@ -72,12 +72,54 @@
                     <div>
                         <p> <span class="settings-title">Engagement Score</span><br>
                         </p>
-                        <hr>
-                        <div class="px-4">
+                        <hr><br>
+                        <form action="">
+                            <div class="d-flex px-4 row align-items-end">
+                                <div class="col-lg-2">
+                                    <label for="" class="input-text hot">Hot</label>
+                                </div>
 
-                            <p>Demo</p>
+                                <div class="col-lg-5">
+                                    <label for="" class="input-text">Percentage rate </label>
+                                    <input type="text" class="form-control" placeholder="250">
+                                </div>
+                                <div class="col-lg-5 ">
+                                    <label for="" class="input-text">Score Range</label>
+                                    <input type="text" class="form-control" placeholder="150">
+                                </div>
+                            </div> <br>
 
-                        </div>
+                            <div class="d-flex px-4 row align-items-end">
+                                <div class="col-lg-2">
+                                    <label for="" class="input-text warm">Warm</label>
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <label for="" class="input-text">Percentage rate </label>
+                                    <input type="text" class="form-control" placeholder="250">
+                                </div>
+                                <div class="col-lg-5 ">
+                                    <label for="" class="input-text">Score Range</label>
+                                    <input type="text" class="form-control" placeholder="150">
+                                </div>
+                            </div> <br>
+
+                            <div class="d-flex px-4 row align-items-end">
+                                <div class="col-lg-2">
+                                    <label for="" class="input-text cold">Cold</label>
+                                </div>
+
+                                <div class="col-lg-5">
+                                    <label for="" class="input-text">Percentage rate </label>
+                                    <input type="text" class="form-control" placeholder="250">
+                                </div>
+                                <div class="col-lg-5 ">
+                                    <label for="" class="input-text">Score Range</label>
+                                    <input type="text" class="form-control" placeholder="150">
+                                </div>
+                            </div> <br>
+
+                        </form> <br>
                         <div class="d-flex justify-content-end">
                             <button class="btn-primary">Save Changes</button>
                         </div>
@@ -89,7 +131,7 @@
                 <div class="tab-pane fade " id="topInterests" role="tabpanel">
                     <p> <span class="settings-title">Top Interests</span><br>
                     </p>
-                    <hr>
+                    <hr><br>
                     <div class="px-4">
 
                         <p>Demo</p>
@@ -104,13 +146,34 @@
 
 
                 <div class="tab-pane fade " id="engagementMetrics" role="tabpanel">
-                    <p> <span class="settings-title"> placeholder</span><br>
+                    <p> <span class="settings-title"> Engagement Metrics</span><br>
                     </p>
                     <hr><br>
                     <div class="px-4">
+                        <form action="">
+                            <div class="d-flex row">
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text"> Articles </label>
+                                    <input type="text" class="form-control" placeholder="30%">
+                                </div>
 
-                        <p>Demo</p>
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Time spent </label>
+                                    <input type="text" class="form-control" placeholder="15%">
+                                </div>
+                            </div> <br>
+                            <div class="d-flex row">
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Downloads </label>
+                                    <input type="text" class="form-control" placeholder="14%">
+                                </div>
 
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text"> Repeat Visit </label>
+                                    <input type="text" class="form-control" placeholder="50%">
+                                </div>
+                            </div> <br>
+                        </form> <br>
                     </div>
                     <div class="d-flex justify-content-end">
                         <button class="btn-primary">Save Changes</button>
