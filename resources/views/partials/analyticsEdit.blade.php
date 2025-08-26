@@ -12,7 +12,7 @@
                     type="button" role="tab">Top Interests</button>
                 <button class="nav-link" id="engagementMetrics-tab" data-bs-toggle="pill"
                     data-bs-target="#engagementMetrics" type="button" role="tab">Engagement Metrics</button>
-                <button class="nav-link" id="converionLeads-tab" data-bs-toggle="pill" data-bs-target="#converionLeads"
+                <button class="nav-link" id="conversionFunnel-tab" data-bs-toggle="pill" data-bs-target="#conversionFunnel"
                     type="button" role="tab">Conversion Funnel</button>
                 <button class="nav-link" id="audienceGrowth-tab" data-bs-toggle="pill" data-bs-target="#audienceGrowth"
                     type="button" role="tab">Audience Growth</button>
@@ -129,16 +129,36 @@
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
 
                 <div class="tab-pane fade " id="topInterests" role="tabpanel">
-                    <p> <span class="settings-title">Top Interests</span><br>
-                    </p>
-                    <hr><br>
-                    <div class="px-4">
-
-                        <p>Demo</p>
-
+                    <p><span class="settings-title">Top Interest</span><br></p>
+                    <hr>
+                    <div class="px-4 d-flex">
+                        <div class="col-lg-4 mb-2">
+                            <label class="input-text">Category</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="input-text">Percentage</label>
+                        </div>
+                        <div class="col-lg-2 align-items-end">
+                            <label class="input-text">Delete</label><br>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn-primary">Save Changes</button>
+                    <div class="px-4" id="interestContainer">
+                        <div class="d-flex row interest-row">
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="Artificial Intelligence">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="1500">
+                            </div>
+                            <div class="col-lg-2 align-items-end">
+                                <i class="bi bi-x-square text-danger delete-row" style="cursor:pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" class="btn-secondary" onclick="addInterestRow()">Add</button>
+                        <button type="button" class="btn-primary">Save Changes</button>
                     </div>
                 </div>
 
@@ -182,24 +202,79 @@
 
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
 
-                <div class="tab-pane fade " id="converionLeads" role="tabpanel">
-                    <p> <span class="settings-title"> placeholder</span><br>
+                <div class="tab-pane fade " id="conversionFunnel" role="tabpanel">
+                    <p> <span class="settings-title">Conversion Funnel</span><br>
                     </p>
                     <hr><br>
+                    <div class="px-4 d-flex">
+                        <div class="col-lg-3 mb-2">
+                            <label class="settings-title">TITLE</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="settings-title">USERS</label>
+                        </div>
+                        <div class="col-lg-2 align-items-end">
+                            <label class="settings-title">% OF PREVIOUS</label><br>
+                        </div>
+                    </div><br>
                     <div class="px-4">
-
-                        <p>Demo</p>
-
+                        <div class="d-flex row ">
+                            <div class="col-lg-2 align-items-end">
+                                <label for="" class="input-text ">View</label>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="10,000">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="47%">
+                            </div>
+                        </div>
+                        <div class="d-flex row ">
+                            <div class="col-lg-2 align-items-end">
+                                <label for="" class="input-text ">Engage</label>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="6,500">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="35%">
+                            </div>
+                        </div>
+                        <div class="d-flex row ">
+                            <div class="col-lg-2 align-items-end">
+                                <label for="" class="input-text ">Interact</label>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="5,000">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="47%">
+                            </div>
+                        </div>
+                        <div class="d-flex row ">
+                            <div class="col-lg-2 align-items-end">
+                                <label for="" class="input-text ">Convert</label>
+                            </div>
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="1260">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="17%
+">
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn-primary">Save Changes</button>
+                    <br>
+                    <div class="d-flex justify-content-end gap-2">
+
+                        <button type="button" class="btn-primary">Save Changes</button>
                     </div>
                 </div>
 
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
 
                 <div class="tab-pane fade " id="audienceGrowth" role="tabpanel">
-                    <p> <span class="settings-title"> placeholder</span><br>
+                    <p> <span class="settings-title">Audience Growth</span><br>
                     </p>
                     <hr><br>
                     <div class="px-4">
@@ -252,9 +327,42 @@
 
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
 
-
             </div>
         </div>
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        function addInterestRow() {
+            let container = document.getElementById("interestContainer");
+            let newRow = document.createElement("div");
+            newRow.classList.add("d-flex", "row", "interest-row");
+
+            newRow.innerHTML = `<div class="col-lg-4">
+                                                <input type="text" class="form-control mt-2 mb-2" placeholder="Artificial Intelligence">
+                                                </div>
+                                                <div class="col-lg-4">
+                                                    <input type="text" class="form-control mt-2 mb-2" placeholder="2000">
+                                                </div>
+                                                <div class="col-lg-2 align-items-end">
+                                                    <i class="bi bi-x-square text-danger delete-row mt-2 mb-2" style="cursor:pointer"></i>
+                                            </div>`;
+
+            container.appendChild(newRow);
+
+            // attach delete event
+            newRow.querySelector(".delete-row").addEventListener("click", function () {
+                newRow.remove();
+            });
+        }
+
+        // Attach delete event to existing rows
+        document.querySelectorAll(".delete-row").forEach(icon => {
+            icon.addEventListener("click", function () {
+                this.closest(".interest-row").remove();
+            });
+        });
+    </script>
+@endpush
