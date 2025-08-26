@@ -10,6 +10,10 @@
                     data-bs-target="#performanceMetrics" type="button" role="tab">Performance Metrics</button>
                 <button class="nav-link" id="activities-tab" data-bs-toggle="pill" data-bs-target="#activities"
                     type="button" role="tab">Activities</button>
+                <button class="nav-link" id="trafficSources-tab" data-bs-toggle="pill" data-bs-target="#trafficSources"
+                    type="button" role="tab">Traffic Sources</button>
+                <button class="nav-link" id="topInterest-tab" data-bs-toggle="pill" data-bs-target="#topInterest"
+                    type="button" role="tab">Top Interest</button>
                 <button class="nav-link" id="RecentActivity-tab" data-bs-toggle="pill" data-bs-target="#RecentActivity"
                     type="button" role="tab">Recent Activity</button>
             </div>
@@ -23,7 +27,7 @@
                         <div class="d-flex justify-content-between">
                             <p class="settings-title"> Subscribers Growth</p>
                             <select name="months" id="" class="custom-select-multiple-trigger">
-                                <option value="january" selected >january</option>
+                                <option value="january" selected>january</option>
                                 <option value="february">february</option>
                                 <option value="march">march</option>
                                 <option value="april">april</option>
@@ -147,7 +151,78 @@
                 </div>
 
                 <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                <div class="tab-pane fade " id="trafficSources" role="tabpanel">
+                    <p> <span class="settings-title">Traffic Sources</span><br>
+                    </p>
+                    <hr>
+                    <div class="px-4">
+                        <form action="">
+                            <div class="d-flex row">
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Direct</label>
+                                    <input type="text" class="form-control" placeholder="30%">
+                                </div>
 
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Organic</label>
+                                    <input type="text" class="form-control" placeholder="15%">
+                                </div>
+                            </div> <br>
+                            <div class="d-flex row">
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Social</label>
+                                    <input type="text" class="form-control" placeholder="14%">
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <label for="" class="input-text">Refferal</label>
+                                    <input type="text" class="form-control" placeholder="50%">
+                                </div>
+                            </div> <br>
+                        </form> <br>
+
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn-primary">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
+                <div class="tab-pane fade " id="topInterest" role="tabpanel">
+                    <p><span class="settings-title">Top Interest</span><br></p>
+                    <hr>
+                    <div class="px-4 d-flex">
+                        <div class="col-lg-4 mb-2">
+                            <label class="input-text">Category</label>
+                        </div>
+                        <div class="col-lg-4">
+                            <label class="input-text">Percentage</label>
+                        </div>
+                        <div class="col-lg-2 align-items-end">
+                            <label class="input-text">Delete</label><br>
+                        </div>
+                    </div>
+                    <div class="px-4" id="interestContainer">
+                        <div class="d-flex row interest-row">
+                            <div class="col-lg-4 mb-2">
+                                <input type="text" class="form-control" placeholder="Artificial Intelligence">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control" placeholder="15%">
+                            </div>
+                            <div class="col-lg-2 align-items-end">
+                                <i class="bi bi-x-square text-danger delete-row" style="cursor:pointer"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="d-flex justify-content-end gap-2">
+                        <button type="button" class="btn-secondary" onclick="addInterestRow()">Add</button>
+                        <button type="button" class="btn-primary">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- ------------------------------------------------------------------------------------------------------------------------------------------------  -->
                 <div class="tab-pane fade " id="RecentActivity" role="tabpanel">
                     <p> <span class="settings-title">Recent Activity</span><br>
                     </p>
@@ -169,3 +244,37 @@
     </div>
 
 @endsection
+
+@push('scripts')
+    <script>
+        function addInterestRow() {
+            let container = document.getElementById("interestContainer");
+            let newRow = document.createElement("div");
+            newRow.classList.add("d-flex", "row", "interest-row");
+
+            newRow.innerHTML = `<div class="col-lg-4">
+                                            <input type="text" class="form-control mt-2 mb-2" placeholder="Artificial Intelligence">
+                                            </div>
+                                            <div class="col-lg-4">
+                                                <input type="text" class="form-control mt-2 mb-2" placeholder="20%">
+                                            </div>
+                                            <div class="col-lg-2 align-items-end">
+                                                <i class="bi bi-x-square text-danger delete-row mt-2 mb-2" style="cursor:pointer"></i>
+                                        </div>`;
+
+            container.appendChild(newRow);
+
+            // attach delete event
+            newRow.querySelector(".delete-row").addEventListener("click", function () {
+                newRow.remove();
+            });
+        }
+
+        // Attach delete event to existing rows
+        document.querySelectorAll(".delete-row").forEach(icon => {
+            icon.addEventListener("click", function () {
+                this.closest(".interest-row").remove();
+            });
+        });
+    </script>
+@endpush
