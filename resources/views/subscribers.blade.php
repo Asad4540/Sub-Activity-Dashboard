@@ -5,7 +5,8 @@
         <div class="d-flex justify-content-end gap-2 mb-3">
             <button class="btn-secondary" style="padding:0 !important">Export &nbsp;<i class="bi bi-arrow-down-square"
                     style="color:var(--btn-primary-color)"></i></button>
-            <button class="btn-primary ">Add Subscriber &nbsp; <i class="bi bi-person-add" style="color:#fff"></i> </button>
+            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#subscriberModal">Add Subscriber
+                &nbsp; <i class="bi bi-person-add" style="color:#fff"></i> </button>
         </div>
 
         <div class="p-3 subs-div">
@@ -197,6 +198,99 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Add Subsriber Modal  -->
+    <div class="modal fade" id="subscriberModal" tabindex="-1" aria-labelledby="subscriberModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="subscriberModalLabel">Add New Subscriber</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Full Name -->
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Full Name">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="mb-3">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" class="form-control" placeholder="Enter Email Address">
+                        </div>
+
+                        <!-- Company + Job -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Company Name</label>
+                                <input type="text" class="form-control" placeholder="Enter Company Name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Job Designation</label>
+                                <select class="form-select">
+                                    <option selected disabled>Job Designation</option>
+                                    <option>Manager</option>
+                                    <option>Developer</option>
+                                    <option>Designer</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- City + State -->
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-control" placeholder="Enter City">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">State</label>
+                                <input type="text" class="form-control" placeholder="Enter State">
+                            </div>
+                        </div>
+
+                        <!-- Country -->
+                        <div class="mb-3">
+                            <label class="form-label">Country</label>
+                            <input type="text" class="form-control" placeholder="Enter Country">
+                        </div>
+
+                        <!-- LinkedIn -->
+                        <div class="mb-3">
+                            <label class="form-label">LinkedIn Profile Link</label>
+                            <input type="url" class="form-control" placeholder="Paste Your LinkedIn URL">
+                        </div>
+
+                        <!-- Status -->
+                        <div class="mb-3">
+                            <label class="form-label d-block">Status</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="active" value="active">
+                                <label class="form-check-label" for="active">Active</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="status" id="inactive" value="inactive">
+                                <label class="form-check-label" for="inactive">Inactive</label>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-3">
+                            <a href="#" class="text-primary fw-bold"><i class="bi bi-plus-lg"></i> Add Phone Number</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">ADD</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 @endsection
 
 @push('scripts')
