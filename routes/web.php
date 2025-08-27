@@ -25,9 +25,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
-Route::get('/subscribers', [SubscribersController::class, 'index'])->name('subscribers');
 Route::get('/analytics', [AnalyticsController::class, 'index'])->name('analytics');
 Route::get('/settings', [SettingsController::class, 'index'])->name('settings');
+Route::get('/subscribers', [SubscribersController::class, 'index'])->name('subscribers');
+Route::get('/subscribers/profile/id', [SubscribersController::class, 'profile'])->name('profile');
+Route::get('/subscribers/profile/edit/id/', [SubscribersController::class, 'profileEdit'])->name('profileEdit'); //Not ready
+
 
 //Dashboard Edit
 Route::get('/dashboard/edit', function () {

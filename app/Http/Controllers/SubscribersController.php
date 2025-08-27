@@ -25,4 +25,14 @@ class SubscribersController extends Controller
     {
         return view('subscribers');
     }
+
+    public function profile()
+    {
+        return view('profile');
+    }
+
+    public function profileEdit()
+    {
+        return view('partials.profileEdit');
+    }
 }
