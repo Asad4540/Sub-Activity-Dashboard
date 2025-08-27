@@ -5,7 +5,8 @@
         <div class="d-flex justify-content-end gap-2 mb-3">
             <button class="btn-secondary" style="padding:0 !important">Export &nbsp;<i class="bi bi-arrow-down-square"
                     style="color:var(--btn-primary-color)"></i></button>
-            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#subscriberModal">Add Subscriber
+            <button type="button" class="btn-primary" data-bs-toggle="modal" data-bs-target="#subscriberModal">Add
+                Subscriber
                 &nbsp; <i class="bi bi-person-add" style="color:#fff"></i> </button>
         </div>
 

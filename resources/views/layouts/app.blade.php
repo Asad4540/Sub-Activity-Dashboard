@@ -124,6 +124,14 @@
                                 'title' => 'Subscribers Lists',
                                 'subtitle' => 'Dashboard/Subscribers Lists'
                             ],
+                            'subscribers/profile/id' => [
+                                'title' => 'Subscribers Profile Overview',
+                                'subtitle' => 'Dashboard/Subscribers Lists/Subscriber Profile'
+                            ],
+                            'subscribers/profile/edit/id' => [
+                                'title' => 'Subscribers Profile Edit',
+                                'subtitle' => 'Dashboard/Subscribers Lists/Subscriber Profile/Edit'
+                            ],
                             'analytics' => [
                                 'title' => 'Sales Analytics',
                                 'subtitle' => 'Dashboard/Analytics'
