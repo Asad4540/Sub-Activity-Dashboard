@@ -260,7 +260,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <input type="text" class="form-control" placeholder="17%
-">
+                        ">
                             </div>
                         </div>
                     </div>
@@ -278,11 +278,67 @@
                     </p>
                     <hr><br>
                     <div class="px-4">
+                        <!-- Year Selection -->
+                        <div class="row mb-4">
+                            <div class="col-md-4  align-items-center">
+                                <label for="yearSelect" class="me-3 mb-2 fw-bold">Select Year :</label>
+                                <select class="form-select" id="yearSelect"></select>
+                            </div>
+                        </div>
 
-                        <p>Demo</p>
-
+                        <!-- Months Grid -->
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <label class="form-label">January</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">February</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">March</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">April</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">May</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">June</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">July</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">August</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">September</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">October</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">November</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label">December</label>
+                                <input type="number" class="form-control" placeholder="Value">
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-end mt-5">
                         <button class="btn-primary">Save Changes</button>
                     </div>
                 </div>
@@ -341,14 +397,14 @@
             newRow.classList.add("d-flex", "row", "interest-row");
 
             newRow.innerHTML = `<div class="col-lg-4">
-                                                <input type="text" class="form-control mt-2 mb-2" placeholder="Artificial Intelligence">
-                                                </div>
-                                                <div class="col-lg-4">
-                                                    <input type="text" class="form-control mt-2 mb-2" placeholder="2000">
-                                                </div>
-                                                <div class="col-lg-2 align-items-end">
-                                                    <i class="bi bi-x-square text-danger delete-row mt-2 mb-2" style="cursor:pointer"></i>
-                                            </div>`;
+                            <input type="text" class="form-control mt-2 mb-2" placeholder="Artificial Intelligence">
+                            </div>
+                            <div class="col-lg-4">
+                                <input type="text" class="form-control mt-2 mb-2" placeholder="2000">
+                            </div>
+                            <div class="col-lg-2 align-items-end">
+                                <i class="bi bi-x-square text-danger delete-row mt-2 mb-2" style="cursor:pointer"></i>
+                        </div>`;
 
             container.appendChild(newRow);
 
@@ -364,5 +420,16 @@
                 this.closest(".interest-row").remove();
             });
         });
+
+        //Select year
+        const select = document.getElementById("yearSelect");
+        const currentYear = new Date().getFullYear();
+        for (let y = currentYear - 10; y <= currentYear + 10; y++) {
+            let opt = document.createElement("option");
+            opt.value = y;
+            opt.text = y;
+            if (y === currentYear) opt.selected = true;
+            select.add(opt);
+        }
     </script>
 @endpush
