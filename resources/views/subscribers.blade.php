@@ -50,7 +50,7 @@
                             <td>New York, USA</td>
                             <td>Active</td>
                             <td>
-                                <img src="{{ asset('assets/images/view.png') }}" alt="">
+                                <img src="{{ asset('assets/images/view.png') }}" onclick="window.location.href='{{ route('profile') }}'" style="cursor:pointer" alt="">
                                 <img src="{{ asset('assets/images/edit.png') }}" alt="">
                                 <img src="{{ asset('assets/images/delete.png') }}" alt="">
                             </td>
