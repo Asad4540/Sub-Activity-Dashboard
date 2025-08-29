@@ -16,7 +16,7 @@
 
             <!-- Card 1 -->
             <div class="col">
-                <div class="card  h-100">
+                <div class="card h-100">
                     <div class="d-flex justify-content-between p-3">
                         <div> <span class="card-head">Total Subscribers </span><br>
                             <span class="card-nums"> 1,243</span> <span class="cards-percent text-success"> +8.2% vs last
