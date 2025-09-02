@@ -377,7 +377,8 @@
 
 
 @endsection
-    @push('scripts')
+
+@push('scripts')
         <script>
 
             //ACTIVITES CHART
@@ -683,4 +684,4 @@
             });
         </script>
 
-    @endpush
+@endpush

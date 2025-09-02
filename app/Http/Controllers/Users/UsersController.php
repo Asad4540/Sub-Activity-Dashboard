@@ -22,7 +22,7 @@ class UsersController extends Controller
     public function store(StoreUserRequest $request)
     {
         $validated = $request->validated();
-        
+
         $validated['plain_password'] = $validated['password'];
         $validated['password'] = bcrypt($validated['password']);
 
@@ -31,13 +31,13 @@ class UsersController extends Controller
             'sales' => 2,
             'delivery' => 3,
             default => null,
-        };  
+        };
 
         unset($validated['role']);
 
         try {
             User::create($validated);
-            
+
             return response()->json([
                 'status' => 'success',
                 'message' => 'New user has been created successfully!',
