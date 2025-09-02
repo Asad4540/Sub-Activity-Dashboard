@@ -478,6 +478,10 @@ input:checked+.slider:before {
     text-transform: capitalize;
 }
 
+.content-interaction-box{
+    border-radius: 16px;
+}
+
 
 /* ------------------------------------------------------------------------     */
 @media (max-width: 1200px) {
